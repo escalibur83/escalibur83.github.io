@@ -1,11 +1,12 @@
 h1 {
   color: #555;
   text-align: center;
+      font-size: 50px;
 }
 
 body {
   color: #555;
-  background-color: #EB5055;
+  background-color: #6699FF;
   padding: 10px;
   text-align: center;
 }
@@ -20,7 +21,7 @@ h2 { text-align: center; }
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 30px;
     margin: 4px 2px;
     cursor: pointer;
 }
@@ -90,7 +91,7 @@ img.rot {
 .meet {
   top: 25px;
   color: #555;
-  font-size: 25px;
+  font-size: 40px;
   font-weight: bold;
   position: absolute;
   left: 50%;
