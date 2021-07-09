@@ -1,0 +1,166 @@
+/*------------------------------------*\
+    #Call To Action
+\*------------------------------------*/
+.cta {
+    position      : relative;
+    padding-top   : 0;
+    padding-bottom: 0;
+    overflow      : visible;
+
+    .action-container {
+        position        : relative;
+        background-color: $color-theme;
+        padding         : 100px 150px;
+        position        : relative;
+        z-index         : 1;
+        border-radius   : 42px;
+        text-align      : center;
+        transform       : translateY(177px);
+        margin-top      : -177px;
+
+        @media #{$maxTablet} {
+            padding: 175px 50px 80px;
+        }
+
+        @media #{$maxSmall} {
+            padding: 170px 10px 80px;
+        }
+
+        .shape-1 {
+            position: absolute;
+            right   : -40px;
+            top     : 10px;
+
+            @media #{$maxSmall} {
+                right: -65px;
+            }
+        }
+
+        .shape-2 {
+            position: absolute;
+            left    : 30px;
+            top     : 10px;
+
+            @media #{$maxSmall} {
+                left: -50px;
+            }
+        }
+
+        .shape-3 {
+            position: absolute;
+            left    : 23px;
+            bottom  : 35px;
+
+            @media #{$maxSmall} {
+                bottom: 0;
+            }
+        }
+    }
+
+    h3 {
+        font-family   : $font-heading;
+        color         : $color-white;
+        text-transform: capitalize;
+        font-size     : 36px;
+        font-weight   : 700;
+        line-height   : 50px;
+        margin-bottom : 60px;
+
+        @media #{$maxSmall} {
+            font-size  : 32px;
+            line-height: 1.2;
+        }
+    }
+}
+
+.form-mailchimp {
+    position    : relative;
+    margin-right: 0;
+    margin-left : 0;
+
+    @media screen and (max-width:767px) {
+        width: 100%;
+    }
+
+    .input-group {
+        display         : flex;
+        justify-content : space-between;
+        border          : none;
+        height          : 80px;
+        padding         : 10px 10px 10px 45px;
+        border-radius   : 15px;
+        background-color: $color-white;
+        position        : relative;
+
+        @media #{$maxTablet} {
+            height          : auto;
+            padding         : 15px;
+            /*flex-direction: column;*/
+        }
+
+        @media screen and (max-width:467px) {
+            padding: 20px;
+        }
+
+        .btn {
+            width        : 190px;
+            border-radius: 15px;
+            height       : 60px;
+            line-height  : 60px;
+            outline      : none;
+
+            .icon {
+                margin-right: 10px;
+                width       : 20px;
+                margin-left : 0;
+            }
+
+            span {
+                font-family   : $font-heading;
+                font-size     : 18px;
+                font-weight   : 600;
+                text-transform: capitalize;
+            }
+
+            @media screen and (min-width:468px) and (max-width:467px) {
+                width: 120px;
+            }
+        }
+
+        .input-icon {
+            display    : flex;
+            align-items: center;
+            width      : calc(100% - 200px);
+
+            @media screen and (max-width:467px) {
+                width        : 100%;
+                margin-bottom: 10px;
+            }
+
+            @media screen and (min-width:468px) and (max-width:467px) {
+                width: calc(100% - 120px);
+            }
+
+            svg {
+                margin-right: 22px;
+                width       : 30px;
+            }
+
+            .form-control {
+                margin-bottom : 0;
+                border-bottom : 0;
+                height        : auto;
+                line-height   : normal;
+                font-size     : 22px;
+                font-weight   : 400;
+                font-family   : $font-body;
+                text-transform: capitalize;
+                color         : $color-body2;
+
+                @media (max-width:'395px') {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

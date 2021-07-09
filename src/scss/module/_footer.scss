@@ -1,0 +1,172 @@
+/*------------------------------------*\
+    #Footer
+\*------------------------------------*/
+.footer {
+    padding-top     : 270px;
+    position        : relative;
+    background-color: #262B47;
+
+    .footer-top {
+        padding: 0 0 40px 0;
+
+        @media #{$maxTablet} {
+            text-align: center;
+            padding   : 0;
+        }
+
+        .footer-logo {
+            margin-bottom: 35px;
+
+            img {
+                max-width: 100%;
+                height   : auto;
+            }
+        }
+
+        p {
+            font-size  : 16px;
+            line-height: 26px;
+            font-family: $font-body;
+            font-weight: 400;
+            color      : rgba(255, 255, 255, .7);
+        }
+
+        .footer-widget {
+            padding-top  : 12px;
+            margin-bottom: 42px;
+
+            .widget-title {
+                font-family   : $font-heading;
+                font-size     : 20px;
+                line-height   : 26px;
+                font-weight   : 600;
+                margin-bottom : 40px;
+                color         : $color-white;
+                text-transform: capitalize;
+            }
+
+            ul {
+                margin : 0;
+                padding: 0;
+
+                li {
+                    margin-bottom: 16px;
+
+                    a {
+                        font-family   : $font-body;
+                        font-size     : 16px;
+                        font-weight   : 400;
+                        color         : rgba(255, 255, 255, .7);
+                        transition    : 0.3s ease-in-out;
+                        position      : relative;
+                        text-transform: capitalize;
+
+                        &:hover {
+                            padding-left: 18px;
+                            color       : #ffffff;
+
+                            &::before {
+                                opacity   : 1;
+                                visibility: visible;
+                                transform : translateY(-50%) translateX(0px);
+                            }
+                        }
+
+                        &::before {
+                            content         : '';
+                            position        : absolute;
+                            top             : 50%;
+                            transform       : translateY(-50%) translateX(-10px);
+                            left            : 0;
+                            opacity         : 0;
+                            visibility      : hidden;
+                            width           : 11px;
+                            height          : 2px;
+                            transition      : 0.3s ease-in-out;
+                            background-color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-social {
+            margin-bottom: 30px;
+
+            @media #{$maxTablet} {
+                text-align: center;
+            }
+
+            ul {
+                margin-bottom: 0;
+
+                li {
+                    display     : inline-block;
+                    margin-right: 8px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        display         : inline-flex;
+                        justify-content : center;
+                        align-items     : center;
+                        width           : 38px;
+                        height          : 38px;
+                        border-radius   : 50%;
+                        background-color: $color-white;
+                        font-size       : 17px;
+                        line-height     : 42px;
+                        color           : #3D3D3D;
+                        transition      : 0.3s ease-in-out;
+
+                        &:hover {
+                            background-color: $color-theme;
+                            color           : $color-white;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .footer-bottom {
+        background-color: #262B47;
+
+        hr {
+            border-color: rgba(255, 255, 255, .2);
+        }
+
+        .footer-copyright {
+            padding-top   : 32px;
+            padding-bottom: 32px;
+
+            a,
+            span {
+                font-family   : $font-body;
+                font-size     : 16px;
+                font-weight   : 400;
+                line-height   : 26px;
+                text-transform: capitalize;
+                color         : $color-white;
+                color         : rgba(255, 255, 255, .7);
+            }
+
+            a {
+                &:hover {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .footer-copyright {
+        font-size: 12px;
+    }
+}
