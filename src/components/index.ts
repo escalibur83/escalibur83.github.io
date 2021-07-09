@@ -1,6 +1,0 @@
-export * from './DownloadApp'
-export * from './FeaturePreview'
-export * from './Footer'
-export * from './Header'
-export * from './Link'
-export * from './Main'

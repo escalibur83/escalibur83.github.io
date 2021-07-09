@@ -1,0 +1,155 @@
+/*------------------------------------*\
+    #Pricing
+\*------------------------------------*/
+.pricing {
+    position: relative;
+
+    .pricing-switcher {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        margin-bottom  : 44px;
+
+        .btn {
+            width        : 103px;
+            height       : 54px;
+            font-size    : 18px;
+            font-family  : $font-body;
+            border       : 1px solid $color-theme;
+            color        : $color-theme;
+            border-radius: 5px 0 0 5px;
+
+            &:last-child {
+                border-radius: 0 5px 5px 0;
+            }
+
+            &.active,
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $color-theme;
+                color           : $color-white;
+            }
+        }
+    }
+
+    .pricing-panel {
+        background-color   : $color-white;
+        padding            : 40px 30px 50px;
+        margin-bottom      : 35px;
+        transition         : all 0.35s ease-in-out;
+        position           : relative;
+        backface-visibility: hidden;
+        border             : 1px solid #f1f1f1;
+        border-radius      : 10px;
+
+        @media #{$maxTablet} {
+            max-width: 370px;
+            margin   : 0 auto 30px;
+        }
+
+        &.visible {
+            position: relative;
+            z-index : 5;
+        }
+
+        &.hidden {
+            position : absolute;
+            top      : 0;
+            left     : 0;
+            height   : 100%;
+            width    : 100%;
+            z-index  : 1;
+            transform: rotateY(180deg);
+        }
+
+        .pricing-head {
+            position      : relative;
+            display       : flex;
+            flex-direction: column;
+            align-items   : center;
+            position      : relative;
+            overflow      : hidden;
+            padding-bottom: 15px;
+            border-bottom : 1px solid #f1f1f1;
+
+            .pricing-type {
+                margin-bottom: 10px;
+                text-align   : center;
+
+                .per {
+                    font-family   : $font-body;
+                    font-size     : 20px;
+                    font-weight   : 500;
+                    line-height   : 24px;
+                    color         : $color-body2;
+                    text-transform: capitalize;
+                    margin-bottom : 0;
+                }
+
+                .price {
+                    font-family  : $font-heading;
+                    font-size    : 45px;
+                    font-weight  : 600;
+                    line-height  : 68px;
+                    color        : $color-theme;
+                    margin-bottom: 0;
+                }
+            }
+
+            .pricing-name {
+                font-family   : $font-heading;
+                font-size     : 24px;
+                font-weight   : 500;
+                line-height   : 35px;
+                text-transform: capitalize;
+                color         : $color-body2;
+                margin-bottom : 26px;
+            }
+        }
+
+        .pricing-body {
+            text-align: center;
+
+            .pricing-list {
+                padding-top  : 25px;
+                margin-bottom: 35px;
+
+                li {
+                    font-family   : $font-body;
+                    font-size     : 18px;
+                    line-height   : 22px;
+                    color         : $color-body2;
+                    font-weight   : 500;
+                    text-align    : center;
+                    text-transform: capitalize;
+                    padding-bottom: 12px;
+                }
+            }
+
+            .btn {
+                width : 195px;
+                height: 60px;
+
+                @media #{$maxTablet} {
+                    width       : calc(100% - 30px);
+                    margin-right: auto;
+                    margin-left : auto;
+                }
+            }
+        }
+
+        &.active {
+            box-shadow: #dbdbdb78 0px 10px 40px;
+            border    : 0;
+
+            .pricing-body {
+                .btn {
+                    background-color: $color-theme;
+                    color           : $color-white;
+                }
+            }
+        }
+    }
+
+}

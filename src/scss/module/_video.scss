@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    #Video
+\*------------------------------------*/
+.video {
+    .player {
+        position     : relative;
+        border-radius: 8px;
+
+        @media screen and (min-width:992px) {
+            padding: 300px 0;
+        }
+
+        @media screen and (max-width:991px) {
+            padding: 200px 0;
+        }
+
+        .btn-video {
+            position    : absolute;
+            top         : 50%;
+            left        : 50%;
+            transform   : translate(-50%, -50%);
+            z-index     : 600;
+            width       : 88px;
+            height      : 88px;
+            border-color: $color-white;
+
+            &:hover {
+                border-color: $color-theme;
+            }
+
+            &::before {
+                content         : '';
+                height          : 100%;
+                width           : 100%;
+                position        : absolute;
+                top             : 0;
+                left            : 0;
+                right           : 0;
+                background-color: rgba($color-white, 0.32);
+                border-radius   : 100%;
+                transform       : scale(1);
+                opacity         : 1;
+                animation       : pulse 1.5s cubic-bezier(0, 0.51, 0.45, 1.49) 0s infinite;
+            }
+        }
+    }
+}
+
+.mfp-bg {
+    z-index: 1543;
+}
+
+.mfp-wrap {
+    z-index: 1642;
+}
+
+@include keyFrame(pulse) {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.4);
+        opacity  : 0;
+    }
+}
+
+
+/* Custom, iPhone Retina */
